@@ -1,109 +1,177 @@
-/* Reset e Fonte */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body {
-    font-family: Arial, sans-serif;
-    color: #333;
-}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia Comercial - Bem-vindo</title>
+    <style>
+        /* Reset e Fonte */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
 
-/* Cabeçalho e Menu */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 30px;
-    background-color: #0073e6;
-    color: white;
-}
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-}
-.navbar ul {
-    list-style: none;
-    display: flex;
-}
-.navbar li {
-    margin-left: 20px;
-}
-.navbar a {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-}
-.navbar a:hover {
-    color: #ffd700;
-}
+        /* Cabeçalho e Menu */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background-color: #0073e6;
+            color: white;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .navbar ul {
+            list-style: none;
+            display: flex;
+        }
+        .navbar li {
+            margin-left: 20px;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        .navbar a:hover {
+            color: #ffd700;
+        }
 
-/* Banner Principal */
-.banner {
-    text-align: center;
-    padding: 80px 20px;
-    background: url('https://via.placeholder.com/1500x500') no-repeat center center/cover;
-    color: white;
-}
-.banner h1 {
-    font-size: 48px;
-    margin-bottom: 10px;
-}
-.banner p {
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-.banner button {
-    background-color: #ffd700;
-    border: none;
-    padding: 15px 30px;
-    font-size: 18px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-.banner button:hover {
-    background-color: #ffc107;
-}
+        /* Banner Principal */
+        .banner {
+            text-align: center;
+            padding: 80px 20px;
+            background: url('https://via.placeholder.com/1500x500') no-repeat center center/cover;
+            color: white;
+        }
+        .banner h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+        .banner p {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .banner button {
+            background-color: #ffd700;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .banner button:hover {
+            background-color: #ffc107;
+        }
 
-/* Seção de Categorias */
-.categorias {
-    padding: 50px 20px;
-    text-align: center;
-}
-.categorias h2 {
-    font-size: 36px;
-    margin-bottom: 40px;
-}
-.categoria-lista {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-.categoria-item {
-    background-color: #f7f7f7;
-    padding: 20px;
-    width: 150px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-.categoria-item img {
-    max-width: 100px;
-    border-radius: 50%;
-}
-.categoria-item h3 {
-    margin-top: 10px;
-    font-size: 18px;
-}
+        /* Seção de Categorias */
+        .categorias {
+            padding: 50px 20px;
+            text-align: center;
+        }
+        .categorias h2 {
+            font-size: 36px;
+            margin-bottom: 40px;
+        }
+        .categoria-lista {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .categoria-item {
+            background-color: #f7f7f7;
+            padding: 20px;
+            width: 150px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .categoria-item img {
+            max-width: 100px;
+            border-radius: 50%;
+        }
+        .categoria-item h3 {
+            margin-top: 10px;
+            font-size: 18px;
+        }
 
-/* Rodapé */
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-}
-footer p {
-    margin: 5px 0;
-}
+        /* Rodapé */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        footer p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header e Menu -->
+    <header>
+        <div class="logo">Guia Comercial</div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#categorias">Categorias</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Banner Principal -->
+    <section class="banner">
+        <h1>Bem-vindo ao Guia Comercial</h1>
+        <p>Encontre os melhores serviços e produtos na sua região!</p>
+        <button onclick="exploreCategories()">Explore Categorias</button>
+    </section>
+
+    <!-- Seção de Categorias -->
+    <section id="categorias" class="categorias">
+        <h2>Categorias</h2>
+        <div class="categoria-lista">
+            <div class="categoria-item">
+                <img src="https://via.placeholder.com/100" alt="Categoria 1">
+                <h3>Restaurantes</h3>
+            </div>
+            <div class="categoria-item">
+                <img src="https://via.placeholder.com/100" alt="Categoria 2">
+                <h3>Educação</h3>
+            </div>
+            <div class="categoria-item">
+                <img src="https://via.placeholder.com/100" alt="Categoria 3">
+                <h3>Serviços</h3>
+            </div>
+            <div class="categoria-item">
+                <img src="https://via.placeholder.com/100" alt="Categoria 4">
+                <h3>Saúde</h3>
+            </div>
+            <!-- Adicione mais categorias conforme necessário -->
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 Guia Comercial. Todos os direitos reservados.</p>
+        <p>Desenvolvido por você e Caio.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        function exploreCategories() {
+            document.getElementById("categorias").scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
