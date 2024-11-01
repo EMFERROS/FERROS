@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guia Comercial - Bem-vindo</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
     <style>
         /* Reset e Fonte */
         * {
@@ -12,7 +13,7 @@
             box-sizing: border-box;
         }
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', sans-serif;
             color: #333;
         }
 
@@ -47,10 +48,23 @@
 
         /* Banner Principal */
         .banner {
+            position: relative;
             text-align: center;
             padding: 80px 20px;
             background: url('https://via.placeholder.com/1500x500') no-repeat center center/cover;
             color: white;
+        }
+        .banner::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0, 0, 0, 0.4);
+            background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.7));
+            z-index: 1;
+        }
+        .banner h1, .banner p, .banner button {
+            position: relative;
+            z-index: 2;
         }
         .banner h1 {
             font-size: 48px;
@@ -66,10 +80,13 @@
             padding: 15px 30px;
             font-size: 18px;
             cursor: pointer;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s, transform 0.3s;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            border-radius: 8px;
         }
         .banner button:hover {
             background-color: #ffc107;
+            transform: scale(1.05);
         }
 
         /* Seção de Categorias */
@@ -83,8 +100,8 @@
         }
         .categoria-lista {
             display: flex;
-            justify-content: center;
             flex-wrap: wrap;
+            justify-content: center;
             gap: 20px;
         }
         .categoria-item {
@@ -94,6 +111,11 @@
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .categoria-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
         }
         .categoria-item img {
             max-width: 100px;
@@ -113,6 +135,14 @@
         }
         footer p {
             margin: 5px 0;
+        }
+        .social-media a {
+            margin: 0 10px;
+            display: inline-block;
+            transition: transform 0.3s;
+        }
+        .social-media a:hover {
+            transform: scale(1.1);
         }
     </style>
 </head>
@@ -141,37 +171,127 @@
     <section id="categorias" class="categorias">
         <h2>Categorias</h2>
         <div class="categoria-lista">
-            <div class="categoria-item">
-                <img src="https://via.placeholder.com/100" alt="Categoria 1">
-                <h3>Restaurantes</h3>
-            </div>
-            <div class="categoria-item">
-                <img src="https://via.placeholder.com/100" alt="Categoria 2">
-                <h3>Educação</h3>
-            </div>
-            <div class="categoria-item">
-                <img src="https://via.placeholder.com/100" alt="Categoria 3">
-                <h3>Serviços</h3>
-            </div>
-            <div class="categoria-item">
-                <img src="https://via.placeholder.com/100" alt="Categoria 4">
-                <h3>Saúde</h3>
-            </div>
-            <!-- Adicione mais categorias conforme necessário -->
+            <!-- Lista extensa de categorias -->
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Restaurantes"><h3>Restaurantes</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Educação"><h3>Educação</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Serviços Domésticos"><h3>Serviços Domésticos</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Saúde"><h3>Saúde</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Construção"><h3>Construção</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Tecnologia"><h3>Tecnologia</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Beleza"><h3>Beleza</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Vestuário"><h3>Vestuário</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Fitness"><h3>Fitness</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Alimentação"><h3>Alimentação</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Automotivo"><h3>Automotivo</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Turismo"><h3>Turismo</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Eventos"><h3>Eventos</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Pet Shop"><h3>Pet Shop</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Informática"><h3>Informática</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Fisioterapia"><h3>Fisioterapia</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Jardinagem"><h3>Jardinagem</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Segurança"><h3>Segurança</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Marketing Digital"><h3>Marketing Digital</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Consultoria"><h3>Consultoria</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Cozinha"><h3>Cozinha</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Fotografia"><h3>Fotografia</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Artesanato"><h3>Artesanato</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Limpeza"><h3>Limpeza</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Psicologia"><h3>Psicologia</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Agenciamento"><h3>Agenciamento</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Construção Civil"><h3>Construção Civil</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Lojas de Móveis"><h3>Lojas de Móveis</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Transporte"><h3>Transporte</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Imobiliária"><h3>Imobiliária</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Joalheria"><h3>Joalheria</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Arquiteto"><h3>Arquiteto</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Designer Gráfico"><h3>Designer Gráfico</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Construção de Piscinas"><h3>Construção de Piscinas</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Estética"><h3>Estética</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Web Design"><h3>Web Design</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Gestão de Projetos"><h3>Gestão de Projetos</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Assistência Técnica"><h3>Assistência Técnica</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Lanchonete"><h3>Lanchonete</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Sorveteria"><h3>Sorveteria</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Estúdio de Música"><h3>Estúdio de Música</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Vigilância"><h3>Vigilância</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Assessoria de Imprensa"><h3>Assessoria de Imprensa</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Cabeleireiro"><h3>Cabeleireiro</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Lavanderia"><h3>Lavanderia</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Marcenaria"><h3>Marcenaria</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Transporte Escolar"><h3>Transporte Escolar</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Catering"><h3>Catering</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Eventos Corporativos"><h3>Eventos Corporativos</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Locação de Equipamentos"><h3>Locação de Equipamentos</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Maquiagem"><h3>Maquiagem</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Consultoria Financeira"><h3>Consultoria Financeira</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Auditoria"><h3>Auditoria</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Tratamento de Imagem"><h3>Tratamento de Imagem</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Artes Gráficas"><h3>Artes Gráficas</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Eletrodomésticos"><h3>Eletrodomésticos</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Reformas"><h3>Reformas</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Consultoria de RH"><h3>Consultoria de RH</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Desenvolvimento de Apps"><h3>Desenvolvimento de Apps</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Balcão de Atendimento"><h3>Balcão de Atendimento</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Assessoria Contábil"><h3>Assessoria Contábil</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Cursos Online"><h3>Cursos Online</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Conservação e Limpeza"><h3>Conservação e Limpeza</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Turismo Receptivo"><h3>Turismo Receptivo</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Serviços de Domicílio"><h3>Serviços de Domicílio</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Patrimonial"><h3>Patrimonial</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Consultoria Ambiental"><h3>Consultoria Ambiental</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Animação"><h3>Animação</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Designer de Interiores"><h3>Designer de Interiores</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Clínica de Reabilitação"><h3>Clínica de Reabilitação</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Serviços Jurídicos"><h3>Serviços Jurídicos</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Estudantes de Cálculo"><h3>Estudantes de Cálculo</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Clínica de Estética"><h3>Clínica de Estética</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Consultoria de TI"><h3>Consultoria de TI</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Locação de Carros"><h3>Locação de Carros</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Assessoria de Viagens"><h3>Assessoria de Viagens</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Assessoria de Imagem"><h3>Assessoria de Imagem</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Desenvolvimento de Sites"><h3>Desenvolvimento de Sites</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Nutrição"><h3>Nutrição</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Consultoria em Marketing"><h3>Consultoria em Marketing</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Cinematografia"><h3>Cinematografia</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Inspiração de Viagem"><h3>Inspiração de Viagem</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Gestão de Eventos"><h3>Gestão de Eventos</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Aulas Particulares"><h3>Aulas Particulares</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Consultoria em Comércio Exterior"><h3>Consultoria em Comércio Exterior</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Consultoria de Vendas"><h3>Consultoria de Vendas</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Eventos Esportivos"><h3>Eventos Esportivos</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Produção Musical"><h3>Produção Musical</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Planejamento de Viagem"><h3>Planejamento de Viagem</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Preparação para Concursos"><h3>Preparação para Concursos</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Tratamento de Dados"><h3>Tratamento de Dados</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Consultoria de Comunicação"><h3>Consultoria de Comunicação</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Capacitação Profissional"><h3>Capacitação Profissional</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Estudo de Mercado"><h3>Estudo de Mercado</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Recrutamento e Seleção"><h3>Recrutamento e Seleção</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Produção de Vídeo"><h3>Produção de Vídeo</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Serviços Gráficos"><h3>Serviços Gráficos</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Revisão de Textos"><h3>Revisão de Textos</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Consultoria de Moda"><h3>Consultoria de Moda</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Turismo de Aventura"><h3>Turismo de Aventura</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Gestão de Redes Sociais"><h3>Gestão de Redes Sociais</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Marketing Digital"><h3>Marketing Digital</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Importação e Exportação"><h3>Importação e Exportação</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Acompanhamento de Projetos"><h3>Acompanhamento de Projetos</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Treinamentos Empresariais"><h3>Treinamentos Empresariais</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Implantação de Sistemas"><h3>Implantação de Sistemas</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Consultoria em Segurança"><h3>Consultoria em Segurança</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Escola de Dança"><h3>Escola de Dança</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Automatização de Processos"><h3>Automatização de Processos</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Produção de Eventos"><h3>Produção de Eventos</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Locação de Espaços"><h3>Locação de Espaços</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Aulas de Música"><h3>Aulas de Música</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Clube de Leitura"><h3>Clube de Leitura</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Gestão de Patrimônio"><h3>Gestão de Patrimônio</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Cinemas"><h3>Cinemas</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Pet Shop"><h3>Pet Shop</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Restaurantes"></h3>Restaurantes</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Veterinária"><h3>Veterinária</h3></div>
+            <div class="categoria-item"><img src="https://via.placeholder.com/100" alt="Serviços de Segurança"><h3>Serviços de Segurança</h3></div>
         </div>
-    </section>
-
-    <!-- Rodapé -->
-    <footer>
-        <p>&copy; 2024 Guia Comercial. Todos os direitos reservados.</p>
-        <p>Desenvolvido por você e Caio.</p>
-    </footer>
-
-    <!-- JavaScript -->
-    <script>
-        function exploreCategories() {
-            document.getElementById("categorias").scrollIntoView({ behavior: 'smooth' });
-        }
-    </script>
+    </div>
 </body>
 </html>
