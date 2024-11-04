@@ -3,31 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Guia Comercial com serviços e produtos diversos.">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
     <title>Guia Comercial</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        /* Estilo do Menu */
+        .menu {
+            background-color: #007bff;
+            color: #fff;
+            padding: 15px;
+            display: flex;
+            justify-content: space-around;
+        }
+        .menu-item {
+            position: relative;
+        }
+        .menu-item > a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px;
+            transition: color 0.3s;
+        }
+        .menu-item > a:hover {
+            color: #ffcc00;
+        }
+        /* Submenu */
+        .submenu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #fff;
+            display: none;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            min-width: 200px;
+        }
+        .submenu a {
+            color: #333;
+            padding: 10px;
+            display: block;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+        .submenu a:hover {
+            background-color: #f4f4f4;
+        }
+        /* Mostrar o submenu */
+        .menu-item:hover .submenu {
+            display: block;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Guia Comercial</h1>
-        <nav aria-label="Menu principal">
-            <a href="#">Home</a>
-            <a href="#">Sobre</a>
-            <a href="#">Serviços</a>
-            <a href="#">Contato</a>
-        </nav>
-    </header>
-    <div class="banner">
-        Bem-vindo ao nosso Guia Comercial!
-    </div>
-    <div class="categories" id="categoriesContainer">
-        <!-- Categorias serão inseridas aqui -->
-    </div>
-    <footer>
-        <p>&copy; 2024 Meu Guia Comercial. Todos os direitos reservados.</p>
-    </footer>
 
-    <script src="script.js"></script>
+<header class="menu">
+    <!-- Categorias -->
+    <div class="menu-item">
+        <a href="#">Serviços</a>
+        <div class="submenu">
+            <a href="#">Consultoria</a>
+            <a href="#">Marketing</a>
+            <a href="#">Desenvolvimento</a>
+            <a href="#">Design</a>
+        </div>
+    </div>
+    <div class="menu-item">
+        <a href="#">Produtos</a>
+        <div class="submenu">
+            <a href="#">Eletrônicos</a>
+            <a href="#">Móveis</a>
+            <a href="#">Moda</a>
+            <a href="#">Cosméticos</a>
+        </div>
+    </div>
+    <div class="menu-item">
+        <a href="#">Eventos</a>
+        <div class="submenu">
+            <a href="#">Conferências</a>
+            <a href="#">Workshops</a>
+            <a href="#">Feiras</a>
+            <a href="#">Exposições</a>
+        </div>
+    </div>
+</header>
+
 </body>
 </html>
