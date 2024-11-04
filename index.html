@@ -5,100 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Guia Comercial com serviços e produtos diversos.">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
     <title>Guia Comercial</title>
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        header {
-            background-color: #007bff;
-            color: #fff;
-            padding: 15px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        h1 {
-            margin: 0;
-        }
-        nav {
-            display: flex;
-        }
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 15px;
-            transition: color 0.3s;
-        }
-        nav a:hover {
-            color: #ffcc00;
-        }
-        .banner {
-            background-image: url('https://via.placeholder.com/1920x400');
-            background-size: cover;
-            background-position: center;
-            height: 400px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #fff;
-            font-size: 2.5rem;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-        }
-        .categories {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 20px;
-            padding: 20px;
-        }
-        .categoria-item {
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            overflow: hidden;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        .categoria-item:hover {
-            transform: scale(1.05);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        }
-        .categoria-item img {
-            width: 100%;
-            height: 100px;
-            object-fit: cover;
-        }
-        footer {
-            background-color: #007bff;
-            color: #fff;
-            text-align: center;
-            padding: 15px 20px;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-        }
-        @media (max-width: 600px) {
-            nav {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            nav a {
-                margin: 5px 0;
-            }
-            .banner {
-                height: 250px;
-                font-size: 1.5rem;
-            }
-        }
-    </style>
 </head>
 <body>
     <header>
         <h1>Guia Comercial</h1>
-        <nav>
+        <nav aria-label="Menu principal">
             <a href="#">Home</a>
             <a href="#">Sobre</a>
             <a href="#">Serviços</a>
@@ -115,28 +28,6 @@
         <p>&copy; 2024 Meu Guia Comercial. Todos os direitos reservados.</p>
     </footer>
 
-    <script>
-        const categorias = [
-            { nome: "Consultoria de TI", imagem: "https://via.placeholder.com/200" },
-            { nome: "Locação de Carros", imagem: "https://via.placeholder.com/200" },
-            { nome: "Assessoria de Viagens", imagem: "https://via.placeholder.com/200" },
-            { nome: "Assessoria de Imagem", imagem: "https://via.placeholder.com/200" },
-            // Adicione mais categorias conforme necessário
-        ];
-
-        const container = document.getElementById('categoriesContainer');
-
-        categorias.forEach(categoria => {
-            const item = document.createElement('div');
-            item.classList.add('categoria-item');
-            
-            item.innerHTML = `
-                <img src="${categoria.imagem}" alt="${categoria.nome}">
-                <h3>${categoria.nome}</h3>
-            `;
-            
-            container.appendChild(item);
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
